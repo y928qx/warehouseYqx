@@ -13,9 +13,10 @@ $(document).ready(function () {
 			function () {
 				$("input").css("background-color"," #DA70F5");
 			});
+	
 	$("input").blur(
 	function () {
-		 $("input").css("background-color","#97D1E0");
+		          $("input").css("background-color","#97D1E0");
 	});
 });
 </script>
