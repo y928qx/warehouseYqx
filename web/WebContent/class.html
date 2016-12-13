@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel=stylesheet href="css1/cssclass.css" type="text/css">
+
+</head>
+<style type="text/css">
+@IMPORT url("css1/cssclass2.css");
+
+<!--
+h2 {
+	color: purple;
+	font-family: "小篆";
+	background: "yellow"
+}
+
+#1 {
+	color: "red";
+	font-family: "仿宋";
+	;
+}
+
+ol li {
+	color: "yellow";
+	font-family: "隶书";
+}
+-->
+</style>
+
+
+
+<body
+	style="background-image: url('http://www.theepicengine.com/wp-content/uploads/2012/05/Giraffe.jpg'); background-repeat: no-repeat;">
+<frameset cols="30%,30%,*" border="3" />
+
+<h2 style="font-weight: 900">今天是小雪天气</h2>
+<p class="my">今天会不会下雪????</p>
+<ol>
+	<li style="color: blue; font-family: 小篆">热点新闻</li>
+
+	<a
+		href="http://world.huanqiu.com/article/2016-11/9711796.html?from=bdwz"
+		title="习大大在访问111"> <input type="image"
+		src="http://www.xinhuanet.com/photo/titlepic/111994/1119949623_1479646338177_title0h.jpg"
+		width="100px" height="50px">
+	</a>
+
+
+
+
+	<img alt="sss"
+		src="http://www.xinhuanet.com/photo/titlepic/111994/1119949623_1479646338177_title0h.jpg"
+		title="这个只是图片而已" width="100px" height="50px">
+
+	<li>习近平在秘鲁国会发表重要演讲 专题</li>
+	<li>李克强：中国仍是全球最佳投资目的地</li>
+	<li>日本福岛7.3级强震引发海啸</li>
+	<li>中国开启速冻模式！这股寒潮究竟哪来的？</li>
+</ol>
+
+<dl>
+	<dt>这是使用link的方法</dt>
+	<dd>
+		<a
+			href="http://china.huanqiu.com/article/2016-11/9711680.html?from=bdwz">
+			人社部部长：适时出台渐进式延迟退休年龄政策</a>
+	</dd>
+	<dd style="color: red; font-family: 楷体">韩媒称朴槿惠仍拒绝主动辞职 总统府准备背水一战</dd>
+	<dd>财政部:地方政府应公开部门人员工资和奖金支出</dd>
+	<dd>这不是假牌!新能源汽车专用号牌将在5城市试点启用</dd>
+</dl>
+
+<ul>
+	<li>使用@import引入</li>
+	<li>这是无序的</li>
+	<li>缅北冲突致中国边境一公民受伤</li>
+	<li>云南城镇可见弹片弹孔</li>
+	<li>畹町镇出现弹头和弹孔</li>
+</ul>
+<tr>
+	<td>请点击选择</td>
+
+
+	<td><select name="1" size="1">
+
+			<option value="2">图片</option>
+			<option value="4" selected="selected">新闻</option>
+			<option value="3">铁把</option>
+			<option value="6">油库</option>
+			<option value="5">摆渡</option>
+			<option value="1">搜狐</option>
+
+	</select></td>
+</tr>
+<p>北京时间！！！！！</p>
+<script>
+	function show() {
+		var date = new Date(); //日期对象
+		var now = "";
+		now = date.getFullYear() + "年"; //读英文就行了
+		now = now + (date.getMonth() + 1) + "月"; //取月的时候取的是当前月-1如果想取当前月+1就可以了
+		now = now + date.getDate() + "日";
+		now = now + date.getHours() + "时";
+		now = now + date.getMinutes() + "分";
+		now = now + date.getSeconds() + "秒";
+		document.getElementById("nowDiv").innerHTML = now; //div的html是now这个字符串
+		setTimeout("show()", 1000); //设置过1000毫秒就是1秒，调用show方法
+	}
+</script>
+<body onload="show()">
+	<!-- 网页加载时调用一次 以后就自动调用了-->
+	<div id="nowDiv"></div>
+</frameset>
+</body>
+
+</body>
+</html>

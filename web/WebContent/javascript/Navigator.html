@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script>
+		var len = navigator.plugins.length;
+		with (document) {
+			write("你的浏览器共支持" + len + "种外挂插件: <br>");
+			write("<TABLE BORDER=0>");
+			write("<CAPTION>外挂插件清单</CAPTION>");
+			write("<TR><TH> <TH>名称<TH>描述<TH>文件名");
+			for (var i = 0; i < len; i++)
+				write("<TR><TD>" + i + "<TD>" + navigator.plugins[i].name
+						+ "<TD>" + navigator.plugins[i].description + "<TD>"
+						+ navigator.plugins[i].filename);
+		}
+	</script>
+</body>
+</html>

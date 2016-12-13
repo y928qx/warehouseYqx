@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>九九乘法口诀表</title>
+<link type="text/css" rel="stylesheet" href="lianxi.css">
+<script type="text/javascript"
+	src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+	
+</head>
+<body>
+<p>九九乘法口诀</p>
+<hr/>
+	<!-- 三个控制按钮 -->
+	<input id="id1" type="button" value="九九乘法口诀" />
+	<input id="id2" type="button" value="统计" />
+	<input id="id3" type="button" value="样式" />
+
+<div >
+<!-- 写入table标签，border属性边框线      cellpadding：设置单元格边框与单元格里的内容之间的距离
+     cellspacing：设置单元格间的距离，其为0  可以让border生成的空心 线为实心的  -->
+<table id="tableid" border="1" cellpadding="4" cellspacing="0" style="display: none;border-color: lavender">
+
+<script type="text/javascript">
+      //写入tr标签，并附上id 消失的属性
+      document.write("<tr id='trid1' style='display: none;'>");
+      //输出乘法口诀表的循环
+      for(var a=1;a<10;a++){
+      var s=0;//其位置会影响到S值的输出，s为每一行的总和
+	  for(var b=1;b<10;b++){
+		if(b<=a){
+		document.write("<td id='tdid1' style='display: none;'>"+a+"*"+b+"="+a*b+"</td>")
+		s = s + a*b;
+		}else{
+			document.write("<td id='tdid1 style='display: none;''>"+"&nbsp"+"</td>")
+		}
+	}
+	//输出 每一行的总和
+	 document.write("<td id='tdid2'  style='display: none;'>"+s+"</td>")
+	 document.write("</tr>")
+}
+//另起一行输出每一列的总和与总值
+	 document.write("<tr id='trid2' style='display: none;'>")
+        var m = 0;
+     for (a = 1; a < 10; a++) {
+	    x = (10 - a) * (9 + a) / 2;
+	    y = x * a;
+	    m = y + m;
+        document.write("<td>"+y+"</td>")   //每一列的总值
+    }
+     document.write("<td>"+m+"</td>")   //最终总值，及所有算式的和的总和
+	 document.write("</tr>")
+	
+	//绑定按钮id1  控制隐藏、显示乘法口诀表
+		$(function() {
+		$('#id1').bind('click', function() {
+			$("#trid1,#tdid1,#tableid").toggle('slow', function() {
+
+				if ($('#id1').val() == "九九乘法口诀") {
+					$('#id1').val("隐藏九九乘法口诀")
+				} else {
+					$('#id1').val("九九乘法口诀")
+				}
+			})
+		})
+	})
+	
+	//绑定按钮id2  控制隐藏、显示乘法口诀表每行每列的总值
+		$(function() {
+		$('#id2').bind('click', function() {
+			$("#trid2,#tdid2").toggle('slow')
+		})
+	})
+	//绑定按钮id2  控制隐藏、显示乘法口诀表的样式
+	$(function() {
+		$('#id3').bind('click', function() {
+			$('#tableid').attr("class", "lianxi3");
+		})
+	})
+	
+</script>
+</table>
+
+</div>
+</body>
+</html>

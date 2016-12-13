@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript"
+	src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+<div style=" position:relative;   width: 30px;height: 30px;border:1px; background-color: purple;" ></div>
+<button type="button" >向you移动</button>
+<script type="text/javascript">
+$('button').bind('click',function(){
+	$('div').animate({
+		left:"+=600px"
+		},10000, function () {
+			$('div').animate({
+				left:'-=600px'
+			},10)
+			
+		} );
+	
+	
+});
+
+
+
+</script>
+
+
+</body>
+</html>

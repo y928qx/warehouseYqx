@@ -1,0 +1,87 @@
+            <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript"
+	src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+	<form id="my_form" action="foo.php"></form>
+	<script type="text/javascript">
+		console.log($("#my_form").attr('action'));//控制台打印以及attr的使用
+		$('#my_form').attr('action', 'bar.php');
+		console.log($('#my_form').attr('action'));
+	</script>
+	<hr/>
+<p><b>hello</b></p>
+<script type="text/javascript">
+console.log($('p').html());  
+$('p').html('<b><i>World</i></b>');//html（）以及text（）可以直接在浏览器上显示
+console.log($('p').html());//将world的值赋给p。
+</script>
+
+<hr/>
+<p><b>hello</b></p>
+<script type="text/javascript">
+console.log($.text());  
+$.text('<b><i>World</i></b>');//text（）以及text（）可以直接在浏览器上显示
+console.log($.text());//将world的值赋给p。
+</script>
+
+<input id="qwe" type="text" name="文本框"  >
+
+<script type="text/javascript">
+ $(function () {                      //文本框中的focus與blur的练习
+	$('input').focus(function() {
+		$('#qwe').css('background-color','purple')
+	})
+})  
+$(function () {
+	$('input').blur(function() {
+		$('input').css('background-color','yellow')
+	})
+}) 
+
+</script>   
+
+ <hr/>
+<div style="height: 30px;width: 30px;background-color: purpl;border: 1 "  ></div>
+<script type="text/javascript">
+function ame() {
+	$('div').hide();
+}
+function ame1() {
+	$('div').show();//div的显示很隐藏
+}
+</script>
+<input type="button" onclick="ame()" value="隐藏" >
+<input type="button" onclick="ame1()" value="显示" >
+
+</script> 
+<br/>
+<hr/>
+
+<!-- $('button').bind('click', function () {
+	   $('div').animate({width:'35px'},3000)
+});  -->
+	
+<div style="width: 35px;height: 70px;background-color: blue;" ></div>
+ <button id=  type="button"   >变大</button>
+ <button  id="bu2" type="button"   >变小</button>
+
+      <script type="text/javascript">
+   $('button').bind('click',function(){
+	   $('div').animate({ width:'350px',height:'200px'  },3000,
+	   function () {
+		   $('div').animate({ width:'35px',height:'70px'    })
+	}
+	   
+	   
+	   
+	   )	
+   
+});
+</script>
+</body>
+</html>

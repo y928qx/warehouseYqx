@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+function age() {
+	document.write("helloworld1")
+}
+function dialogbox() {
+	alert('welcome');
+	confirm('we are family?');
+	Prompt("how oid are you","20");
+}
+function pclose(){
+	window.close();
+}
+</script>
+
+</head>
+<body onload="dialogbox()">
+<input type="button" value="弹框" onclick="dialogbox()"  >
+<a  href="javascript:self.close()"       >1111</a>
+<a href="javascript:self.close()">关闭窗口</a>
+<input name="button" type="button" value="点击关闭" onclick="pclose()"  >
+<a href="history.back()"  >	后退</a>
+</body>
+</html>

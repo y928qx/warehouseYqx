@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script  type="text/javascript">
+function Student(name,age) {
+	this.name=name;
+	this.getName=getName;
+	this.age=age;
+}
+function getName() {
+	return this.name;
+}
+function bk() {
+	var s =new Student("qwe","zhangsna",25,"1223333");
+	alert(s.getName());
+	alert(s.name);
+	}
+</script>
+
+
+</head>
+<body >
+
+<input type="button"  value="anniu"  onclick="bk()" >
+</body>
+</html>

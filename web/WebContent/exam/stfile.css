@@ -1,0 +1,19 @@
+@CHARSET "UTF-8";
+h1 { color: purple;
+	font-size: 40px;
+	font-family: 仿宋; 
+	background-color: green;
+	text-align:center;
+	
+	}
+	#qqq{
+	border-width:1px;
+	margin: 1em 28em 10em 28em;
+	border-bottom: 60%;
+	border-style: solid;
+    border-width: 2px;
+   /* border: solid #000 1px;   */
+   /* padding: 2cm 4cm 3cm 4cm; */
+	}
+	
+	

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+</style>
+<link href="stfile.css" rel="stylesheet" type="text/css"  >
+<script type="text/javascript"
+	src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+ <h1>这是一个标题</h1>
+<hr/>
+
+<script type="text/javascript">
+
+</script>
+<input type="button"  value="乘法"  onclick="st()"  />
+<input type="button"  value="统计"  onclick="ss()" />
+<input type="button"  value="样式"  onclick="sw()" />
+
+<div  id="xxx"   >
+<table   border="1" >
+<script type="text/javascript">
+for(var i=0; i<10 ; i++)
+{
+    for(var j=1; j<=i ; j++)
+    {
+      document.write(j+'*'+i+'='+i*j)
+                
+       document.write(" ");  
+    } 
+    document.write("<br/>");
+  }
+
+</script></table>
+</div>
+
+<script type="text/javascript">
+	$("#xxx").hide(3000);
+	function st() {
+		$("#qqq").hide(3000);
+		$("#xxx").show(3000);
+	}
+</script>
+
+
+
+
+
+
+<div  id="yyy" >
+<script type="text/javascript">
+//function ss() {
+	document.write("<tr id='trid' style='display:none' >")
+for(var i=0; i<10 ; i++){
+	         var s=0;
+    for(var j=1; j<=i ; j++) {
+   
+    	document.write( "<td id='tdid' style='display:none'; >"+ j+'*'+i+'='+i*j+'</td>')
+                 s=s+i*j;
+	
+      
+       document.write(" "); 
+    }  
+    
+    document.write("<td id='tdid2'  style='display: none;'>"+s+"</td>")
+	 document.write("</tr>")
+	 document.write("<br/>");
+	
+  }
+	document.write("<tr id='trid2' style='display: none;'>")
+    var m = 0;
+ for (a = 1; a < 10; a++) {
+    x = (10 - a) * (9 + a) / 2;
+    y = x * a;
+    m = y + m;
+    document.write('&nbsp;');
+    document.write("<td>"+y+"</td>") 
+    document.write("&nbsp;");             //每一列的总值
+} 
+ document.write("<td>"+m+"</td>")   //最终总值，及所有算式的和的总和
+ document.write("</tr>")
+	
+	
+	
+	
+	
+	
+//}
+</script> 
+</div>
+
+<div  id="zj" >
+<script type="text/javascript">
+
+/* $(function () {
+	var str = '<tr>';
+	                                     
+	for (var i=1;i<=25; i++) {
+		str =str+ '<td>' + i + '</td>';
+		if (i % 1 ==0) {
+			str =str+ '</tr>';
+		}
+	}
+	$('#zj').append(str);
+}) */
+
+
+
+</script>
+</div>
+
+  
+<!-- <script type="text/javascript">                     
+$(document).ready(function name() {
+	$("button").click(function(){
+		  $("#yyy").append("<tr>document.write(o)</tr>");
+		}  );
+  }  );
+</script> -->
+
+<table    >
+<div  id="qqq" style="background-color: green;"    >
+
+<script type="text/javascript">
+//function st() {
+for(var i=0; i<10 ; i++)
+{
+    for(var j=1; j<=i ; j++)
+    {
+      document.write(j+'*'+i+'='+i*j)
+                  /*  var o=0;
+                   var m=i*j;
+                   var o=o+m; */
+                //document.write(m);
+       document.write(" ");  
+              //document.write(s)
+    }  document.write("<br/>");
+  }
+
+</script></table>
+</div>
+<script type="text/javascript">
+	$("#qqq").hide(3000);
+	function sw() {
+		$("#qqq").show(3000);
+		$("#xxx").hide(3000);
+	}
+</script>
+
+
+
+</body>
+</html>

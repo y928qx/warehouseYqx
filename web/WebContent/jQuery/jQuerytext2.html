@@ -1,0 +1,126 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript">
+$("div").css('border',"1px solid purple");
+
+
+</script>
+</head>
+
+<body>
+<div>这是一个div的标签选择器的测试</div>
+<div id="from" >div的内容</div>
+<div id="to" >div的另外一个内容</div>
+<script type="text/javascript">
+$("#to").html($("#from").html());
+</script>
+<hr/>
+<ul>
+<li class="fruit"  >apple</li>
+<li>tomato</li>
+<li class="fruit" >banana</li>
+<li>potato</li>
+<li class="fruit">orange</li>
+</ul>
+<script type="text/javascript">    //class类的选择器
+$(".fruit").css("color","purple").css("font-family","华文行楷").css("font-size","30px");
+</script>      
+<hr/>
+  
+  
+<ul>
+<li class="fruit"  >apple1</li>
+<li id="tomato" >tomato1</li>
+<li class="fruit" >banana1</li>
+<li>potato</li>
+<li class="fruit">orange1</li>
+</ul>
+<script type="text/javascript">
+$(".fruit, #tomato").css("color","red");//组合class与id共同起作用
+</script>
+           <!--  *选择器先不做，cosole.log（$(‘*‘)） -->
+       <hr/>    
+  
+<div>祖先元素
+<p>
+<lobel>孙元素</lobel>  
+<span><lobel>后代元素</lobel></span>
+<lobel>p的同级别元素用来测试邻居选择器</lobel>
+</p>
+
+<!-- <br/> -->
+<lobel>子元素</lobel>
+</div>
+<script type="text/javascript">
+//$("div lobel").css("color","red")   //祖先后代选择器         
+//$("div span").css("color","purple")//只有后代元素显示
+//$("div>lobel").css("color","yellow")//父子选择器，使用>；
+//$("p>lobel").css("color","pink")//父子选择器，使用>；
+$("p+lobel").css("color","red")//隔壁选择器，使用+；
+$("p~lobel").css("color","yellow").css("background-color","pink")//邻居选择器，使用+；
+</script>
+<ul>
+<li id="fun"  >apple</li>
+<li>tomato</li>
+<li  >banana</li>
+<li>potato</li>
+<li >orange</li>
+</ul>
+<script type="text/javascript">
+$("#fun, li:first").css("color","purple")//.css('background-color','red')//第一个子元素
+$("li:last").css("color","blue").css("font-size",'30px');//最后一个子元素
+</script>
+<ul>
+<li  >apple1</li>
+<li  >apple2</li>
+<li>tomato1</li>
+<li><span><p>这是按照包含过滤</p></span></li>
+</ul>
+<ul id="what">
+<li  >banana1</li>
+<li>potato1</li>
+<li >orange1</li>
+</ul>
+<script type="text/javascript">
+//$("li:first-child").css("color","purple")//每一个ul中的第一个和最后一个
+//$("li:last-child").css("color","green")//每一个ul中的第一个和最后一个
+//$("li:eq(1),#what").css("color","pink").css("font-size",'50px');//指定下标过滤
+//$("li:contains(na)").css("color","red").css("font-size",'50px');//按照文字内容过滤
+ $("li:has(span)").css("color","red")//按照过滤span的内容过滤
+</script>
+<p style="display: none;" >这是隐藏的内容</p>
+<script type="text/javascript">
+$('p:hidden').show();//过滤隐藏和显示元素
+//$('p:visible').hide();//将显示的内容再次隐藏
+</script>
+<input id="ipd" type="text"  class="cls_ipt" />
+<script type="text/javascript">
+$("input[id=ipd]").val('hello');//属性选择器
+</script>
+<hr/>
+<form id="my_form" >
+<input type="text"/>
+<input type="radio"/>
+<input type="radio" checked="checked" />
+</form>
+<script type="text/javascript">//表单选择器
+console.log($('#my_form：input:checked'));
+</script>
+<select id="whtt"   multiple="multiple" >
+<option value="0"> 苹果</option>
+<option value="1" selected="selected" > 橘子</option>
+<option value="2" > banana</option>
+<option value="3" > 菠萝</option>
+<option value="4" > 柚子</option>
+</select>
+<script type="text/javascript">
+console.log($('#whtt:selected'))
+
+</script>
+
+
+</body>
+</html>

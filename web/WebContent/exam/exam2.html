@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+</style>
+<link href="stfile.css" rel="stylesheet" type="text/css"  >
+<script type="text/javascript"
+	src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+ <h1>这是一个标题</h1>
+<hr/>
+
+<script type="text/javascript">
+
+</script>
+<input type="button"  value="乘法"  onclick="st()"  />
+<input type="button"  value="统计"  onclick="ss()" />
+<input type="button"  value="样式"  onclick="sw()" />
+
+
+<div  id="xxx"   >
+<table   border="1" >
+<script type="text/javascript">
+for(var i=0; i<10 ; i++)
+{
+    for(var j=1; j<=i ; j++)
+    {
+      document.write(j+'*'+i+'='+i*j)
+                
+       document.write(" ");  
+    } 
+    document.write("<br/>");
+  }
+
+</script></table>
+</div>
+
+<script type="text/javascript">
+	$("#xxx").hide(3000);
+	function st() {
+		$("#qqq").hide(3000);
+		$("#xxx").show(3000);
+	}
+</script>
+
+
+
+
+     <div >
+
+<table id="tableid" border="1" cellpadding="4" cellspacing="0" style="display: none;border-color: lavender">
+
+<script type="text/javascript">
+      //写入tr标签，并附上id 消失的属性
+      document.write("<tr id='trid1' style='display: none;'>");
+      //输出乘法口诀表的循环
+      for(var a=1;a<10;a++){
+      var s=0;//其位置会影响到S值的输出，s为每一行的总和
+	  for(var b=1;b<10;b++){
+		if(b<=a){
+		document.write("<td id='tdid1' style='display: none;'>"+a+"*"+b+"="+a*b+"</td>")
+		s = s + a*b;
+		}else{
+			document.write("<td id='tdid1 style='display: none;''>"+"&nbsp"+"</td>")
+		}
+	}
+	//输出 每一行的总和
+	 document.write("<td id='tdid2'  style='display: none;'>"+s+"</td>")
+	 document.write("</tr>")
+}
+//另起一行输出每一列的总和与总值
+	 document.write("<tr id='trid2' style='display: none;'>")
+        var m = 0;
+     for (a = 1; a < 10; a++) {
+	    x = (10 - a) * (9 + a) / 2;
+	    y = x * a;
+	    m = y + m;
+        document.write("<td>"+y+"</td>")   //每一列的总值
+    }
+     document.write("<td>"+m+"</td>")   //最终总值，及所有算式的和的总和
+	 document.write("</tr>")
+	
+}
+</script> 
+</table>
+</div> 
+
+
+
+<div  id="zj" >
+<script type="text/javascript">
+</script>
+</div>
+
+
+
+
+
+  
+<!-- <script type="text/javascript">                     
+$(document).ready(function name() {
+	$("button").click(function(){
+		  $("#yyy").append("<tr>document.write(o)</tr>");
+		}  );
+  }  );
+</script> -->
+
+<table    >
+<div  id="qqq" style="background-color: green;"    >
+
+<script type="text/javascript">
+//function st() {
+for(var i=0; i<10 ; i++)
+{
+    for(var j=1; j<=i ; j++)
+    {
+      document.write(j+'*'+i+'='+i*j)
+                  /*  var o=0;
+                   var m=i*j;
+                   var o=o+m; */
+                //document.write(m);
+       document.write(" ");  
+              //document.write(s)
+    }  document.write("<br/>");
+  }
+
+</script>
+</table>
+</div>
+<script type="text/javascript">
+	$("#qqq").hide(3000);
+	function sw() {
+		$("#qqq").show(3000);
+		$("#xxx").hide(3000);
+	}
+</script>
+
+
+
+</body>
+</html>
