@@ -18,9 +18,7 @@
     <servlet-name>ServletDemo</servlet-name>
     <url-pattern>/ServletDemo/ServletDemo</url-pattern>
   </servlet-mapping>
-  
   <servlet>
-<!--   <load-on-startup>11111</load-on-startup> -->
     <servlet-name>printText1</servlet-name>
     <servlet-class>servlet.printText1</servlet-class>
   </servlet>
@@ -28,7 +26,4 @@
     <servlet-name>printText1</servlet-name>
     <url-pattern>/printText1</url-pattern>
   </servlet-mapping>
-  
-  
-  
 </web-app>
