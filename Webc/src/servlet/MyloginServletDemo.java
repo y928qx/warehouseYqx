@@ -34,6 +34,7 @@ public class MyloginServletDemo extends HttpServlet {
 		// response.getWriter().append("Served at:
 		// ").append(request.getContextPath());
 		response.setContentType("text/html;charset=UTF-8");
+
 		PrintWriter out = response.getWriter();
 		out.println("<html>");
 		out.println("<head><title>水水水水</title></head>");
@@ -41,10 +42,12 @@ public class MyloginServletDemo extends HttpServlet {
 		out.println("<h2>调用了doget()方法</p>");
 		out.println("用户输入信息如下：");
 		String username = request.getParameter("username");
+		username = new String(username.getBytes("iso8859-1"), "UTF-8");// 设置输入的用户名，解决中文乱码，设定request对象字符集
 		if (null == username || username == "") {
 			username = "未输入";
 		}
 		String password = request.getParameter("password");
+		password = new String(password.getBytes("iso8859-1"), "UTF-8");// 设置输入的用户名，解决中文乱码，设定request对象字符集
 		if (null == password || password == "") {
 			password = "未输入";
 		}
@@ -52,7 +55,7 @@ public class MyloginServletDemo extends HttpServlet {
 		out.println("<h2>密码：" + password + "</h2>");
 		out.println("</body>");
 		out.println("</html>");
-		/*out.close();*/
+		/* out.close(); */
 	}
 
 	/**
