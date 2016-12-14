@@ -3,10 +3,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<iframe ID='ifm2' WIDTH='260' HEIGHT='70' ALIGN='CENTER' MARGINWIDTH='0'
-	MARGINHEIGHT='0' HSPACE='0' VSPACE='0' FRAMEBORDER='0' SCROLLING='NO'
+<iframe style="background-image: url('weather.JPG');" ID='ifm2'
+	WIDTH='260' HEIGHT='70' ALIGN='CENTER' MARGINWIDTH='0' MARGINHEIGHT='0'
+	HSPACE='0' VSPACE='0' FRAMEBORDER='0' SCROLLING='NO'
 	src="http://news.sina.com.cn/iframe/weather/340101.html"> </iframe>
-	
+
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
@@ -22,6 +23,9 @@
 				<b>欢迎<%=session.getAttribute("userid")%>光临本系统
 				</b>
 			</p>
+			<marquee>
+				<p style="color: white;">制作人：颜庆翔</p>
+			</marquee>
 		</div>
 		<div>
 			&nbsp;
@@ -29,9 +33,6 @@
 		</div>
 		<div>
 			<p>感谢你的访问</p>
-
-
-			<p>制作人：颜庆翔</p>
 			<p>
 			<div id="time">
 				<script>
@@ -44,14 +45,15 @@
 				</script>
 			</div>
 			</p>
-
 			<a href="loginOut.jsp" style="color: purple;">注销</a>
 		</div>
 		<%
 			} else {
 		%>
 		<p>
-			请先进行系统的<a href="login.jsp"></a>登陆
+			<marquee>
+				请先进行系统的<a href="login.jsp"></a>登陆
+			</marquee>
 		</p>
 		<%
 			}

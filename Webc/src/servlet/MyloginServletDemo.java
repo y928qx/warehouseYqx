@@ -41,8 +41,9 @@ public class MyloginServletDemo extends HttpServlet {
 		out.println("<body>");
 		out.println("<h2>调用了doget()方法</p>");
 		out.println("用户输入信息如下：");
+		//request.setCharacterEncoding("UTF-8");   //解决中文乱码的第一种方式
 		String username = request.getParameter("username");
-		username = new String(username.getBytes("iso8859-1"), "UTF-8");// 设置输入的用户名，解决中文乱码，设定request对象字符集
+		username = new String(username.getBytes("iso8859-1"), "UTF-8");//第二种方式， 设置输入的用户名，解决中文乱码，设定request对象字符集
 		if (null == username || username == "") {
 			username = "未输入";
 		}
