@@ -28,7 +28,7 @@ p {
 
 </head>
 <body
-	style="background-image: url('http://img.61gequ.com/allimg/2013-01/1-130106094125.jpg'); text-align: center;">
+	style="background-image: url('http://s9.knowsky.com/bizhi/l/55001-65000/2009529123359282817303.jpg'); text-align: center;">
 	<p>这是一个网站</p>
 	<a href="login.jsp" id="denglu">登录页面</a>
 	<br />

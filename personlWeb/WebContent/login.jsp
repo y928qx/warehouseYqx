@@ -28,7 +28,7 @@
 	</div>
 	<br />
 	<div>
-		<form action="login.jsp" method="post">
+		<form action="<%=request.getContextPath() %>/login2" method="post">
 			<center>
 				用户名:<input type="text" name="uname"
 					style="width: 250px; height: 30px; background-color: #5CBED6" /><br />
