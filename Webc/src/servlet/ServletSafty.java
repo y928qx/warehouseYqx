@@ -2,28 +2,25 @@ package servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.nio.charset.Charset;
-import java.util.Date;
 
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class ThreeMethod
+ * Servlet implementation class ServletSafty
  */
-@WebServlet("/ThreeMethod")
-public class ThreeMethod extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+@WebServlet("/ServletSafty")
+public class ServletSafty extends HttpServlet {
+	//private static final long serialVersionUID = 1L;
+	String ame="";//实例对象，多线程共享
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ThreeMethod() {
+    public ServletSafty() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -34,23 +31,24 @@ public class ThreeMethod extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
-		String str=""+new Date().getTime();//将时间转为string类型
-		request.setAttribute("fromrequest", str);
-		HttpSession session=request.getSession();
-		session.setAttribute("fromsession", str);
-		ServletContext context= getServletConfig().getServletContext();
-		context.setAttribute("fromcontext", str);
-        context.getRequestDispatcher("/dispkay").forward(request, response);
-        
-        response.setContentType("text/html;Charset=UTF-8");
+        response.setContentType("text/html;charset=UTF-8");
         PrintWriter out=response.getWriter();
         out.println("<html>");
-        out.println("<head><title>输出范围属性相关的信息</title></head>");
+        out.println("<head><title>Servlet线程安全问题</title></head>");
         out.println("<body>");
-        out.println("<h3>request的值："+str1+"</h3>");
-        out.println("");
-        out.println("");
-        out.println("");
+        String username=request.getParameter("username");
+       //ame=new String(username.getBytes("iso-8859-1"),"UTF-8");//获取时不是乱码
+        try {
+			Thread.sleep(2000);//睡眠2s，线程
+		}  catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        out.println("<h3>你好 ："+username+"!</h3>");
+        out.println("</body>");
+        out.println("</html>");
+        out.close();
+	
 	}
 
 	/**
