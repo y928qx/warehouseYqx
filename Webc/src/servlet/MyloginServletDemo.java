@@ -37,7 +37,7 @@ public class MyloginServletDemo extends HttpServlet {
 
 		PrintWriter out = response.getWriter();
 		out.println("<html>");
-		out.println("<head><title>水水水水</title></head>");
+		out.println("<head><title>登陆</title></head>");
 		out.println("<body>");
 		out.println("<h2>调用了doget()方法</p>");
 		out.println("用户输入信息如下：");

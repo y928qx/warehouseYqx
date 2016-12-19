@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>do get（）和dopost()的测试</title>
+<title>do get()和dopost()的测试</title>
 </head>
 <body>
 <form action="<%=request.getContextPath() %>/MyloginServletDemo  " method="post">
