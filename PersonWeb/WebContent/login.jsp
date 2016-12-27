@@ -20,7 +20,7 @@
 </script>
 </head>
 <body
-	style="background-image: url('img/11111.jpg'); width: 100%; height: 100%;"
+	style="background-image: url('img/11111.jpg'); background-repeat:no-repeat; width: 100%; height: 100%;"
 	marginheight="220em">
 	<div
 		style="margin: 0.5em 17.3em; font-family: 仿宋; color: white; font-size: 40px;">

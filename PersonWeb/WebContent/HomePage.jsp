@@ -5,7 +5,7 @@
 <head>
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>我的网站首页</title>
 <style type="text/css">
 p {
 	font-family: 仿宋;
@@ -28,11 +28,11 @@ p {
 
 </head>
 <body
-	style="background-image: url('img/homepage.jpg'); text-align: center;">
+	style="background-image: url('img/homepage.jpg'); text-align: center;background-repeat: no-repeat;" >
 	<p>这是一个网站</p>
-	<a href="login.jsp" id="denglu">登录页面</a>
+	<a href="login.jsp" id="denglu">点击登录</a>
 	<br />
-	<span class="spa">用户名：yqx &nbsp;</span> &nbsp;
+	<span class="spa">用户名：颜庆翔 &nbsp;</span> &nbsp;
 	<span class="spa">密码：123456</span>
 <!-- <span style="margin: 10%"  > &copy;通过ISO9000认证</span> -->
 </body>

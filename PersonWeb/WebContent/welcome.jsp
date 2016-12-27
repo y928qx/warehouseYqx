@@ -17,7 +17,7 @@ color: purple;
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
-<body  style="background-image: url('img/welcome11.jpg');"  >
+<body  style="background-image: url('img/welcome11.jpg');background-repeat: no-repeat;"  >
            <center><img alt="sdsdsd" src="img/welcome3.jpg" > </center>
 <p class='bb' ><b>登陆成功，3秒后进入....</b></p>
 

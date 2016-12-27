@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>系统退出中··</title>
 </head>
-<body style="background-image:url('img/77.jpg')  ; "  ><center>
+<body style="background-image:url('img/77.jpg');background-repeat: no-repeat; "  ><center>
 <%
 response.setHeader("refresh", "5;url=login.jsp");
 session.invalidate();
