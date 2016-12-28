@@ -17,6 +17,7 @@ text-align: center;
 color: purple;
 }
 </style>
+<script type="text/javascript" src="text.js"></script>
 </head>
 <body>
 <h1>学生信息添加</h1>
@@ -26,6 +27,7 @@ color: purple;
 	<div>
 				<tr>
 					<td >姓名:</td><input type="text" width="100%" height="100%" name="uname" >&nbsp;
+				
 					<td >班级:</td><input type="text" width="100%" height="100%" name="uclass">&nbsp;
 					<td >课程:</td><input type="text" width="100%" height="100%" name="ucourse">&nbsp;
 					<td >分数:</td><input type="text" width="100%" height="100%" name="ucore">&nbsp;<br/>

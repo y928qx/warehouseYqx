@@ -5,7 +5,7 @@
 <head>
 <script type="text/javascript"
 	src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
-	<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>成绩表</title>
 <style type="text/css">
@@ -32,11 +32,10 @@ td {
 	<p class="pp">学生成绩表</p>
 	<div class="di">
 
-	<a  type="button" href="textShuRu.jsp"  >add</a>	<!-- <input type="button" value="add" name="123">  -->          &nbsp;
-		&nbsp;&nbsp; &nbsp; <input type="button" value="update" name="234">&nbsp;
+		<a type="button" href="textShuRu.jsp">add</a> &nbsp; &nbsp;&nbsp;
+		&nbsp; <input type="button" value="update" name="234">&nbsp;
 		&nbsp;&nbsp; &nbsp; <input type="button" value="delete" name="345">&nbsp;
 		&nbsp;&nbsp; &nbsp; <input type="button" value="select" name="456">
-
 	</div>
 	<hr />
 	<div>
@@ -49,26 +48,15 @@ td {
 				<td>分数</td>
 			</tr>
 			<tr>
-				<td><%=request.getSession().getAttribute("nua") %></td>
-				<td><%=request.getSession().getAttribute("ucl") %></td>
-				<td><%=request.getSession().getAttribute("uco") %></td>
-				<td><%=request.getSession().getAttribute("ucor") %></td>
+				<td><%=request.getSession().getAttribute("nua")%></td>
+				<td><%=request.getSession().getAttribute("ucl")%></td>
+				<td><%=request.getSession().getAttribute("uco")%></td>
+				<td><%=request.getSession().getAttribute("ucor")%></td>
 			</tr>
 		</table>
 
 	</div>
-		<%-- <%=request.setAttribute("list", "mylist") %> --%>
 
-<%-- <c:forEach items="mylist" > --%>
-
- <%-- <%!  String rightCheckCode = (String)request.getSession().getValue("valiCode"); %> --%>
-<%--  <%
- String qq=(String)request.getSession().getAttribute("nua");
- %>
-<%=qq %> --%>
-
-
-<%-- </c:forEach> --%>
 
 
 </body>

@@ -34,7 +34,7 @@ color: purple;
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>你已经成功登录，感谢来访</title>
 </head>
-<body style="background-image: url('img/1234.jpg');background-repeat: no-repeat;">
+<body style="background-image: url('img/homepage.jpg');background-repeat: no-repeat;">
 
 	<div>
 		<!--  float=left可以更改div的位置 -->
