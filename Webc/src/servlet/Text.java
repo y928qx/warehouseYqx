@@ -115,7 +115,7 @@ public class Text extends HttpServlet {
         RequestDispatcher rd = request.getRequestDispatcher(request.getContextPath()+"/exam2/text.jsp");
 		rd.forward(request, response);*/
 		
-		response.setHeader("refresh", "1;url= /Webc/exam2/text.jsp");
+		response.setHeader("refresh", "0;url= /Webc/exam2/text.jsp");
 		
 		//List mylist=(List)request.getAttribute("nua");
 		//PrintWriter out = response.getWriter();

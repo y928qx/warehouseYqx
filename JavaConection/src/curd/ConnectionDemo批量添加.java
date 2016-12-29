@@ -26,6 +26,7 @@ public class ConnectionDemo批量添加 {
 		st.addBatch(sql+"('娜美',18,123456789,'南海海');"); 
 		st.addBatch(sql+"('布鲁克',120,123456789,'新世界');"); 
 		st.addBatch(sql+"('罗宾',23,123456789,'北海道');"); 
+		
 		  //   int cs  = st.executeUpdate();
                int cs[]=st.executeBatch();
 		System.out.println("已经更新的数据   ：" + cs.length); // 向sql中添加字段

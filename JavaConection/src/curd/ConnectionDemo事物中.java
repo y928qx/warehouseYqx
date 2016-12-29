@@ -19,7 +19,7 @@ public class ConnectionDemo事物中 {
 
 		Class.forName(DBDRIVER);
 		Connection coon = DriverManager.getConnection(DBURL, DBUSER, DBPWD);
-                             coon.setAutoCommit(false);
+                    coon.setAutoCommit(false);
                     Savepoint sp=null;
                     try {
 		String sql = "insert into text(name,age,phone,brithplace) values";
@@ -42,11 +42,8 @@ public class ConnectionDemo事物中 {
 		st.close();
 		coon.close();
                 	} catch (Exception e) {
-            			// TODO Auto-generated catch block
+            			
             			e.printStackTrace();
             		}
-            		  
-
-	}
-
+	     }
 }

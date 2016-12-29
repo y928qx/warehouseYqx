@@ -19,7 +19,7 @@ public class Connection查询打印 {
 		Connection coon = DriverManager.getConnection(DBURL, DBUSER, DBPWD);
 		Statement st = (Statement) coon.createStatement();
 		String sql = "select * from text";
-		ResultSet rs = st.executeQuery(sql);
+		ResultSet rs = st.executeQuery(sql); //接受
 		while (rs.next()) {
 			String name = rs.getString("name");
 			int age = rs.getInt("age");
