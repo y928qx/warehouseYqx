@@ -13,9 +13,7 @@
 	<aop:config>
 		<aop:pointcut id="pointcut"
 			expression="execution(public void addNewUser(entity.User))" />
-		<aop:advisor pointcut-ref="pointcut" advice-ref="LoggerBefore" />
-		<aop:advisor advice-ref="LoggerAfterReturuing"
-			pointcut-ref="pointcut" />
+		<aop:advisor  advice-ref="LoggerBefore"   pointcut-ref="pointcut"  />
+		<aop:advisor advice-ref="LoggerAfterReturuing" pointcut-ref="pointcut" />
 	</aop:config>
-
 </beans>

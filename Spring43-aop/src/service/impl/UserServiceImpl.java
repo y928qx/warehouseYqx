@@ -1,6 +1,6 @@
 package service.impl;
 
-import dao.impl.UserDao;
+import dao.UserDao;
 import entity.User;
 import lombok.Setter;
 import service.Userservice;

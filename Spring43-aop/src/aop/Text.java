@@ -15,7 +15,7 @@ public class Text{
 		Userservice uService=(Userservice) ctx.getBean("service");
 		User user=new User();
 
-		user.setEmail("yanqingxiang@qq.com");
+		user.setEmail("yQX@qq.com");
 		user.setId(1);
 		user.setUsername("yqx");
 		user.setPassword("123456");
