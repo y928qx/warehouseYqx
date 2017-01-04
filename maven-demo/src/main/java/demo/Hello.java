@@ -1,12 +1,12 @@
 package demo;
 
-import lombok.Getter;
-import lombok.Setter;
+//import lombok.Getter;
+//import lombok.Setter;
 
 public class Hello {
 
-	@Setter
-	@Getter
+//	@Setter
+	//@Getter
 	private String Name;
 
 	public Hello() {
@@ -20,13 +20,17 @@ public class Hello {
 
 	public String sayHello() {
 		if (this.Name !=null) {
-			return "hello maven"+"我的名字是"+this.getName();
+			//return "hello maven"+"我的名字是 ："+this.getName();
 		}
 		
 		return "hello maven";
 	}
 
 	public static void main(String[] args) {
+		
+		HelloTest h=new HelloTest();
+		System.out.println();
+	
 		System.out.println("hello maven");
 
 	}

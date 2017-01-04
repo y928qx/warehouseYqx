@@ -11,10 +11,10 @@ public class HelloTest {
 
 	@Test
 	public void testSayHello() {
-	Hello h=new Hello("毛泽东");
+/*	Hello h=new Hello("毛泽东");
 	System.out.println(h.sayHello());
 	//assertEquals("hello maven", h.sayHello());
-		
+		*/
 		
 	}
 

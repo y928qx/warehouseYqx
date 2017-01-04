@@ -3,7 +3,6 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>maven.yqx</groupId>
 	<artifactId>maven-demo</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
 	<name>mvn</name>
 	<description>mvn</description>
 
@@ -18,11 +17,29 @@
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
-			<scope>text</scope>
+			<scope>test</scope>
 		</dependency>
 
 
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.16.12</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>com.yqx.mvn</groupId>
+			<artifactId>hellomavendemo</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
 
+	<parent>
+		<groupId>com.yqx.mvn</groupId>
+		<artifactId>mvn-1</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>E:/workspace/mvn-1</relativePath>
+	</parent>
 </project>
