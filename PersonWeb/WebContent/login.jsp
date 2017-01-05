@@ -33,7 +33,7 @@
 			<center>
 				用户名:<input type="text" name="uname"
 					style="width: 250px; height: 30px; background-color: #5CBED6" /><br />
-				<br /> 密&nbsp;&nbsp;码:<input type="password" name="upass"
+				<br /> 密&nbsp;码:<input type="password" name="upass"
 					style="width: 250px; height: 30px; background-color: #5CBED6" /><br />
 				<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
 					type="image" width="250px" height="40px" src="img/button.JPG"

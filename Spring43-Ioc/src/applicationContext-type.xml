@@ -21,6 +21,7 @@
 				<property name="username" value="qwerwr"/>
 			</bean>
 		</property>
+	<!-- 	注入list类型 -->
 		<property name="list">
 			<list>
 				<!-- 定义list中的元素 -->
@@ -32,6 +33,7 @@
 				<value>玻璃球</value>
 			</list>
 		</property>
+		<!-- 	注入array类型 -->
 		<property name="array">
 			<list>
 				<!-- 定义list中的元素 -->
@@ -43,6 +45,7 @@
 				<value>玻璃球</value>
 			</list>
 		</property>
+		<!-- 	注入set类型 -->
 		<property name="set">
 			<list>
 				<!-- 定义list中的元素 -->
@@ -63,7 +66,7 @@
 				<entry key="tennis" value="网球"/>
 			</map>
 		</property>
-
+         <!-- 注入property类型 -->
 		<property name="props">
 			<props>
 				<prop key="basketball">篮球</prop>
