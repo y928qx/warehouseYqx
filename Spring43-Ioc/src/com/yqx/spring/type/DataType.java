@@ -12,7 +12,6 @@ public class DataType {
 	private String specialCharacter1;
 	private String specialCharacter2;
 	private User innerBean;
-	//private User innerBean;
 	private List<String> list; 	
 	private String[] array;
 	private Set<String> set;

@@ -21,7 +21,7 @@
 				<property name="username" value="qwerwr"/>
 			</bean>
 		</property>
-	<!-- 	注入list类型 -->
+	<!--注入list类型 -->
 		<property name="list">
 			<list>
 				<!-- 定义list中的元素 -->
