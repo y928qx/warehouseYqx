@@ -1,4 +1,4 @@
-package servlet;
+/*package servlet;
 
 import java.io.IOException;
 import java.sql.DriverManager;
@@ -19,95 +19,126 @@ import org.apache.catalina.valves.rewrite.Substitution.StaticElement;
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.Statement;
 
-/**
+*//**
  * Servlet implementation class ceshi
- */
+ *//*
 @WebServlet("/ceshi")
 public class ceshi extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-	//����Ϊ�����ӵ�����,��Ҫ���������ݿ�ķ���
+	//以下为新添加的内容,主要是连接数据库的方法
 	private  static final String DBDRIVER="com.mysql.jdbc.Driver";
 	private  static final String DBURL="jdbc:mysql//localhost:3306/personweb";
 	private  static final String DBUSER="root";
 	private  static final String DBPASSWORD="root";
-       
+	
+	
+	
+	
 
 
 	
 	
-    /**
+    *//**
      * @see HttpServlet#HttpServlet()
-     */
+     *//*
     public ceshi() {
         super();
         // TODO Auto-generated constructor stub
     }
 
-	/**
+	*//**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
+	 *//*
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
+      
 		
-		//public static Connection getConnection() throws ClassNotFoundException, Exception{
-			Connection coon=null;
-			Class.forName(DBDRIVER);
+			try {
+				Class.forName(DBDRIVER);
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		
+		Connection coon = null;
+		
+			try {
+				coon = (Connection) DriverManager.getConnection(DBURL,DBUSER,DBPASSWORD);
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		
 			
-			coon= (Connection) DriverManager.getConnection(DBURL,DBUSER,DBPASSWORD);
-			
-			Statement st = (Statement) coon.createStatement();
-			String sql = "select * from yyy";
-			ResultSet rs = st.executeQuery(sql);
+		
+			Statement ss;
+			try {
+				ss = (Statement) coon.createStatement();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		
+			// TODO Auto-generated catch block
+		
+		String sql = "select * from personweb;";
+		
+		ResultSet rs;
+		try {
+		ResultSet rs = ss.executeQuery(sql);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
+		
+		try {
 			while (rs.next()) {
-				String nameq = rs.getString("unname");
-				int ageq = rs.getInt("pnwd");
-				/*System.out.print("name :" + name + "\t");
-				System.out.println("age :" + age + "\t");
-				System.out.println("------------------------------------------------");*/
+				String  name = rs.getString("unname");
+				int age = rs.getInt("pnwd");
 				
 				
-				response.setContentType("text/html;charset=UTF-8");
-				request.setCharacterEncoding("UTF-8");
 				HttpSession session = request.getSession();
-				String name = request.getParameter("uname");
+				String name1 = request.getParameter("uname");
 				String pwd = request.getParameter("upass");
 				
-				if (null != name && null != pwd && nameq.equals(name) ) {
-					
-					session.setAttribute("userid", name);// 将用户名保存在session�?
+				if (null != name && null != pwd && name.equals(name1) ) { //&& pnwd.equals(pwd)
+					// response.setHeader("refresh", "3;url=loginOK.jsp");//瀹氭椂璺宠浆
+					session.setAttribute("userid", name);// 灏嗙敤鎴峰悕淇濆瓨鍦╯ession涓�
+					//session.setAttribute("password", pwd);
 					ServletContext context = getServletContext();
-					response.setHeader("refresh", "3;url=loginOK.jsp");//定时跳转
+					response.setHeader("refresh", "3;url=loginOK.jsp");//瀹氭椂璺宠浆
 					RequestDispatcher rd = context.getRequestDispatcher("/welcome.jsp");
 					rd.forward(request, response);
-				}else {
-					ServletContext context1 = getServletContext();
-					RequestDispatcher rd = context1.getRequestDispatcher("/loginFailed.jsp");
-					rd.include(request, response);
 				}
 				
 				
 				
+				System.out.print("name = " + name + "\t\t");
+				System.out.print("age = " + age + "\t\t");
+				System.out.println();
+				System.out.println("----------------------------");
 			}
-			rs.close();
-			st.close();
-			coon.close();
-			return coon;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
+		rs.close();
+		ss.close();
+		coon.close();
 		
-	
+       
+       
+       
 		
-	
-		
-		
-	//}
 
-	/**
+	}
+	*//**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
+	 *//*
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
 
 }
+*/
